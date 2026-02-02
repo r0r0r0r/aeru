@@ -33,7 +33,7 @@ export const CartDrawer = () => {
 
                     {/* Drawer */}
                     <motion.div
-                        variants={drawerVariants}
+                        variants={drawerVariants as any}
                         initial="closed"
                         animate="open"
                         exit="closed"
