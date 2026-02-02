@@ -1,66 +1,53 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { Navigation } from "@/components/Navigation";
+import { Hero } from "@/components/Hero";
+import { FlavorExplosion } from "@/components/FlavorExplosion";
+import { Marquee } from "@/components/Marquee";
+import { SocialGrid } from "@/components/SocialGrid";
+import { MerchDrop } from "@/components/MerchDrop";
+import { Footer } from "@/components/Footer";
 
-export default function Home() {
+import { client } from "../../sanity/lib/client";
+import { SanityDocument } from "next-sanity";
+import { flavors as localFlavors } from "@/lib/flavors";
+
+const FLAVORS_QUERY = `*[_type == "product"]{
+  _id,
+  name,
+  "id": _id, 
+  tagline,
+  price,
+  "bg": backgroundColor,
+  "image": image.asset->url,
+  "slug": slug.current
+}`;
+
+export default async function Home() {
+  let sanityFlavors: SanityDocument[] = [];
+  try {
+    sanityFlavors = await client.fetch<SanityDocument[]>(FLAVORS_QUERY);
+  } catch (error) {
+    console.error("Failed to fetch Sanity flavors:", error);
+    // Fallback to empty array, loop will just use local
+  }
+
+  // HYBRID MERGE: Combine Sanity (Live) + Local (Backup)
+  // Converting local flavors to match Sanity shape for consistency if needed, 
+  // or just merging arrays if shapes align well enough.
+  // We filter out local flavors that already exist in Sanity (by ID slug match) to avoid duplicates.
+  const sanityIds = new Set(sanityFlavors?.map((f: any) => f.slug) || []);
+  const filteredLocal = localFlavors.filter(f => !sanityIds.has(f.id));
+
+  const allFlavors = [...(sanityFlavors || []), ...filteredLocal];
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <main className="min-h-screen">
+      <Navigation />
+      <Hero />
+      <Marquee />
+      <FlavorExplosion flavors={allFlavors} />
+      <SocialGrid />
+      <MerchDrop />
+      <Footer />
+    </main>
   );
 }

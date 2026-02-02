@@ -1,33 +1,60 @@
+@import "tailwindcss";
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* 
+    AERU VIBRANT SYSTEM (PHASE 2.5)
+    High Energy / Neo-Pop / Brutalist
+  */
+
+  /* The Stage */
+  --c-background: #FFF8E7;
+  /* Warm Cream (Canvas) */
+  --c-foreground: #121212;
+  /* Ink Black (Text) */
+
+  /* High Voltage Accents */
+  --c-brand-orange: #FF4D00;
+  /* Citrus Veil */
+  --c-brand-yellow: #FFD600;
+  /* Acid Sun */
+  --c-brand-pink: #FF0080;
+  /* Stone Bloom */
+  --c-brand-mint: #00FF9D;
+  /* Cyber Mint */
+  --c-brand-violet: #4A00E0;
+  /* Night Tonic */
+
+  /* UI Structure */
+  --border-width: 3px;
+  --border-color: #121212;
+  --shadow-hard: 6px 6px 0px #121212;
+  /* Hard Edge Shadow */
+
+  /* Spacing */
+  --container-padding: clamp(24px, 5vw, 64px);
+
+  /* Animation Physics - Snappy */
+  --ease-snap: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  /* Bouncy/Elastic */
+  --duration-snap: 0.6s;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Reset & Base Styles */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--c-background);
+  color: var(--c-foreground);
+  font-family: 'Arial Black', Impact, sans-serif;
+  /* Placeholder for heavy display font */
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
 a {
@@ -35,8 +62,144 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+/* 
+  Typography Utilities 
+  "LOUD & PROUD"
+*/
+
+.type-display {
+  font-family: 'Arial Black', sans-serif;
+  font-size: clamp(4rem, 12vw, 10rem);
+  text-transform: uppercase;
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+  color: var(--c-foreground);
+  /* Text Stroke effect optionally */
+  -webkit-text-stroke: 0px;
+}
+
+.type-heading {
+  font-family: 'Arial Black', sans-serif;
+  font-size: clamp(2rem, 5vw, 4rem);
+  text-transform: uppercase;
+  line-height: 1.0;
+  letter-spacing: -0.02em;
+}
+
+.type-body {
+  font-family: 'Helvetica', sans-serif;
+  /* Contrast font */
+  font-size: 1.125rem;
+  line-height: 1.5;
+  font-weight: 500;
+  max-width: 50ch;
+}
+
+.type-detail {
+  font-family: 'Courier New', monospace;
+  /* Tech/Raw feel */
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+/* Layout Utilities */
+.layout-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+  padding: 0 var(--container-padding);
+  width: 100%;
+}
+
+/* Neo-Brutalist Card Utility */
+.brutalist-card {
+  background: white;
+  border: var(--border-width) solid var(--c-foreground);
+  box-shadow: var(--shadow-hard);
+  transition: transform 0.2s var(--ease-snap), box-shadow 0.2s var(--ease-snap);
+}
+
+.brutalist-card:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 10px 10px 0px var(--c-foreground);
+}
+
+/* SEMANTIC COMPONENT STYLES */
+
+/* Navigation */
+.nav-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+  padding: clamp(24px, 5vw, 48px);
+  color: var(--c-foreground);
+}
+
+.nav-corner {
+  position: absolute;
+  pointer-events: auto;
+  background: var(--c-background);
+  border: var(--border-width) solid var(--c-foreground);
+  padding: 12px 24px;
+  box-shadow: 4px 4px 0px var(--c-foreground);
+}
+
+.nav-tl {
+  top: clamp(24px, 5vw, 48px);
+  left: clamp(24px, 5vw, 48px);
+}
+
+.nav-tr {
+  top: clamp(24px, 5vw, 48px);
+  right: clamp(24px, 5vw, 48px);
+}
+
+.nav-bl {
+  bottom: clamp(24px, 5vw, 48px);
+  left: clamp(24px, 5vw, 48px);
+}
+
+.nav-br {
+  bottom: clamp(24px, 5vw, 48px);
+  right: clamp(24px, 5vw, 48px);
+}
+
+.nav-link {
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--c-brand-orange);
+  /* FLASHY BG START */
+}
+
+/* Sticker/Badge Elements */
+.sticker-badge {
+  position: absolute;
+  background: var(--c-brand-yellow);
+  color: var(--c-foreground);
+  border-radius: 50%;
+  padding: 2rem;
+  font-weight: 900;
+  transform: rotate(-15deg);
+  border: 3px solid black;
+  box-shadow: 5px 5px 0px black;
+  z-index: 10;
 }
