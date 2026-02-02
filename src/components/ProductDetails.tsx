@@ -24,10 +24,10 @@ interface Flavor {
     description: string;
     notes: string[];
     stats: {
-        acidity: number;
-        sweetness: number;
+        acidity?: number;
+        sweetness?: number;
         chaos: number;
-        [key: string]: number;
+        [key: string]: number | undefined;
     };
     nutrition: {
         calories: number;
