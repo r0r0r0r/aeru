@@ -66,7 +66,7 @@ export const Navigation = () => {
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
-                        variants={menuVariants}
+                        variants={menuVariants as any}
                         initial="closed"
                         animate="open"
                         exit="closed"
