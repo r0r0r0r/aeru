@@ -24,9 +24,6 @@ interface Flavor {
     description: string;
     notes: string[];
     stats: {
-        acidity?: number;
-        sweetness?: number;
-        chaos: number;
         [key: string]: number | undefined;
     };
     nutrition: {
