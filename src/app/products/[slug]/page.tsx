@@ -8,5 +8,6 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
 
     if (!flavor) return notFound();
 
-    return <ProductDetails flavor={flavor} />;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    return <ProductDetails flavor={flavor as any} />;
 }
