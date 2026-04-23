@@ -98,7 +98,7 @@ export const ProductDetails = ({ flavor }: { flavor: Flavor }) => {
                             <span className="type-detail text-[10px] md:text-sm font-bold opacity-50 tracking-widest">ID: {flavor.id.toUpperCase()}</span>
                             <span className="bg-black text-white px-2 py-1 md:px-3 font-black text-[10px] md:text-xs uppercase">{flavor.tagline}</span>
                         </div>
-                        <h1 className="font-[Arial_Black] font-black text-4xl md:text-7xl lg:text-8xl uppercase tracking-tighter leading-[0.9] md:leading-[0.85] text-black mb-4 md:mb-6 break-words">
+                        <h1 className="font-[Arial_Black] font-black text-3xl md:text-7xl lg:text-8xl uppercase tracking-tighter leading-[0.9] md:leading-[0.85] text-black mb-4 md:mb-6 break-words">
                             {flavor.name}
                         </h1>
                         <p className="type-body text-base md:text-xl font-medium leading-relaxed max-w-lg">
@@ -108,8 +108,8 @@ export const ProductDetails = ({ flavor }: { flavor: Flavor }) => {
 
                     {/* Price & Cart */}
                     <div className="flex flex-col gap-4 py-4">
-                        <div className="flex items-center gap-4">
-                            <span className="font-[Arial_Black] font-black text-4xl md:text-6xl tracking-tighter self-center">${flavor.price}</span>
+                        <div className="flex items-center gap-2 md:gap-4">
+                            <span className="font-[Arial_Black] font-black text-3xl md:text-6xl tracking-tighter self-center">${flavor.price}</span>
                             <div className="flex-1 flex gap-2 w-full">
                                 <button onClick={handleAdd} className="flex-1 bg-white text-black text-sm md:text-lg font-black py-3 md:py-4 px-2 border-[3px] border-black shadow-[4px_4px_0px_#000] active:translate-y-[2px] active:shadow-none transition-all whitespace-nowrap">
                                     ADD TO CART
@@ -186,10 +186,8 @@ export const ProductDetails = ({ flavor }: { flavor: Flavor }) => {
 
                     {flavors
                         .filter(f => f.id !== flavor.id) // Exclude current
-                        // Simple shuffle
-                        .sort(() => 0.5 - Math.random())
                         .slice(0, 3) // Take 3
-                        .map((f, i) => (
+                        .map((f) => (
                             <Link key={f.id} href={`/products/${f.id}`} className="col-span-12 md:col-span-4 group">
                                 <div className="border-[3px] border-black bg-[var(--c-background)] p-8 relative h-full transition-transform hover:-translate-y-2 hover:shadow-[8px_8px_0px_#000]">
                                     {/* Image */}

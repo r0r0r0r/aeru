@@ -84,7 +84,7 @@ export const MerchDrop = () => {
     const { addToCart } = useCart();
 
     return (
-        <section className="py-32 bg-black text-white border-y-[3px] border-white relative overflow-hidden">
+        <section className="py-20 bg-black text-white border-y-[3px] border-white relative overflow-hidden">
 
             {/* Background Marquee */}
             <div className="absolute top-1/2 left-0 w-full -translate-y-1/2 opacity-20 pointer-events-none select-none overflow-hidden">
@@ -114,7 +114,7 @@ export const MerchDrop = () => {
                 {items.map((item, i) => (
                     <motion.div
                         key={i}
-                        className="col-span-12 md:col-span-6 relative group"
+                        className="col-span-12 md:col-span-4 relative group"
                         whileHover={{ y: -10 }}
                     >
                         <Link href={`/products/${item.id}`}>
@@ -141,7 +141,7 @@ export const MerchDrop = () => {
                             <div className="w-full flex justify-between items-end">
                                 <div>
                                     <Link href={`/products/${item.id}`}>
-                                        <h3 className="font-[Arial_Black] text-3xl md:text-5xl uppercase leading-none mb-1 group-hover:text-[var(--c-brand-yellow)] transition-colors cursor-pointer">{item.name}</h3>
+                                        <h3 className="font-[Arial_Black] text-2xl md:text-3xl uppercase leading-none mb-1 group-hover:text-[var(--c-brand-yellow)] transition-colors cursor-pointer">{item.name}</h3>
                                     </Link>
                                     <span className="font-mono text-xs text-gray-400">{item.desc}</span>
                                 </div>

@@ -2,8 +2,8 @@ import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { FlavorExplosion } from "@/components/FlavorExplosion";
 import { Marquee } from "@/components/Marquee";
+import { WhatIsAeru } from "@/components/WhatIsAeru";
 import { SocialGrid } from "@/components/SocialGrid";
-import { MerchDrop } from "@/components/MerchDrop";
 import { Footer } from "@/components/Footer";
 
 import { client } from "../../sanity/lib/client";
@@ -40,13 +40,13 @@ export default async function Home() {
   const allFlavors = [...(sanityFlavors || []), ...filteredLocal];
 
   return (
-    <main className="min-h-screen">
+    <main id="main-content" className="min-h-screen w-full overflow-x-hidden">
       <Navigation />
       <Hero />
       <Marquee />
+      <WhatIsAeru />
       <FlavorExplosion flavors={allFlavors} />
       <SocialGrid />
-      <MerchDrop />
       <Footer />
     </main>
   );

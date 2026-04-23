@@ -9,6 +9,7 @@ export const CheckoutOverlay = () => {
     const { isCheckoutOpen, setCheckoutOpen, items, cartTotal, clearCart } = useCart();
     const [step, setStep] = useState<"details" | "payment" | "success">("details");
     const [loading, setLoading] = useState(false);
+    const [orderNumber, setOrderNumber] = useState("");
 
     // Mock Form State
     const [formData, setFormData] = useState({
@@ -26,6 +27,7 @@ export const CheckoutOverlay = () => {
         // Fake processing delay
         setTimeout(() => {
             setLoading(false);
+            setOrderNumber(`ORD-#${Math.floor(Math.random() * 90000) + 10000}`);
             setStep("success");
             clearCart();
         }, 2000);
@@ -163,7 +165,7 @@ export const CheckoutOverlay = () => {
                                     Your crate is secure. Tracking number sent to your email. Expect arrival in 2-3 standard days.
                                 </p>
                                 <div className="bg-black text-white p-4 font-mono text-xl tracking-widest mb-8">
-                                    ORD-#{Math.floor(Math.random() * 90000) + 10000}
+                                    {orderNumber}
                                 </div>
                                 <button onClick={handleClose} className="w-full border-[3px] border-black py-3 font-bold uppercase hover:bg-black hover:text-white transition-colors">
                                     RETURN TO BASE

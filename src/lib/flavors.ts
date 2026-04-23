@@ -2,12 +2,13 @@ export const flavors = [
     {
         id: "citrus-veil",
         name: "CITRUS VEIL",
+        category: "PREMIUM SPARKLING SODA",
         price: 45,
         tagline: "ELECTRIC ZEST",
         color: "var(--c-brand-orange)",
         bg: "#FF4D00",
         accent: "var(--c-brand-yellow)",
-        image: "/images/citrus-veil-chaos.png",
+        image: "/images/citrusveil-background less.png",
         description: "Yuzu shockwave. Bergamot blast. No subtle notes here. A high-voltage citrus hit that wakes up the nervous system.",
         notes: ["YUZU", "BERGAMOT", "MINERAL"],
         stats: {
@@ -25,12 +26,13 @@ export const flavors = [
     {
         id: "stone-bloom",
         name: "STONE BLOOM",
+        category: "PREMIUM SPARKLING SODA",
         price: 45,
         tagline: "NEON PEACH",
         color: "var(--c-brand-pink)",
         bg: "#FF0080",
         accent: "var(--c-brand-mint)",
-        image: "/images/stone-bloom-chaos.png",
+        image: "/images/stone-bloom-background less.png",
         description: "Hibiscus punch. White peach adrenaline. Sweet chaos. Like drinking a synthesizer solo.",
         notes: ["WHITE PEACH", "HIBISCUS", "FROST"],
         stats: {
@@ -48,12 +50,13 @@ export const flavors = [
     {
         id: "night-tonic",
         name: "NIGHT TONIC",
+        category: "PREMIUM SPARKLING SODA",
         price: 45,
         tagline: "DARK MATTER",
         color: "var(--c-brand-violet)",
         bg: "#4A00E0",
         accent: "#FF2E63",
-        image: "/images/night-tonic-chaos.png",
+        image: "/images/night-tonic-backgroundless.png",
         description: "Bitter roots. Blood orange voltage. The midnight fuel. A complex, dark, confident sip for the after-hours.",
         notes: ["BLOOD ORANGE", "GENTIAN", "SPICE"],
         stats: {
@@ -72,6 +75,7 @@ export const flavors = [
     {
         id: "citrus-smash",
         name: "CITRUS SMASH",
+        category: "LIMITED REMIX EDITION",
         price: 50,
         tagline: "ACID RAIN",
         color: "var(--c-brand-yellow)",
@@ -86,6 +90,7 @@ export const flavors = [
     {
         id: "stone-vibe",
         name: "STONE VIBE",
+        category: "LIMITED REMIX EDITION",
         price: 50,
         tagline: "LO-FI PEACH",
         color: "var(--c-brand-pink)",
@@ -100,6 +105,7 @@ export const flavors = [
     {
         id: "night-drive",
         name: "NIGHT DRIVE",
+        category: "LIMITED REMIX EDITION",
         price: 50,
         tagline: "MIDNIGHT OIL",
         color: "var(--c-brand-violet)",
@@ -116,6 +122,7 @@ export const flavors = [
     {
         id: "citrus-clean",
         name: "CITRUS ZERO",
+        category: "PREMIUM SPARKLING WATER",
         price: 40,
         tagline: "PURE VOLTAGE",
         color: "#FFFFFF",
@@ -130,6 +137,7 @@ export const flavors = [
     {
         id: "stone-clean",
         name: "STONE ZERO",
+        category: "PREMIUM SPARKLING WATER",
         price: 40,
         tagline: "NAKED BLOOM",
         color: "#FFFFFF",
@@ -144,6 +152,7 @@ export const flavors = [
     {
         id: "night-clean",
         name: "NIGHT ZERO",
+        category: "PREMIUM SPARKLING WATER",
         price: 40,
         tagline: "VOID WATER",
         color: "#4A00E0",
@@ -159,6 +168,7 @@ export const flavors = [
     {
         id: "merch-hoodie",
         name: "WAREHOUSE HOODIE",
+        category: "HEAVYWEIGHT APPAREL",
         price: 120,
         tagline: "HEAVY DUTY",
         color: "var(--c-brand-yellow)",
@@ -182,6 +192,7 @@ export const flavors = [
     {
         id: "merch-tote",
         name: "DAILY TOTE",
+        category: "UTILITY ACCESSORY",
         price: 45,
         tagline: "UTILITY",
         color: "var(--c-brand-pink)",
@@ -205,6 +216,7 @@ export const flavors = [
     {
         id: "poster-night",
         name: "NIGHT REALITY",
+        category: "COLLECTOR EDITION PRINT",
         price: 30,
         tagline: "A1 POSTER",
         color: "var(--c-brand-violet)",
@@ -228,6 +240,7 @@ export const flavors = [
     {
         id: "poster-stone",
         name: "STONE VIBE",
+        category: "COLLECTOR EDITION PRINT",
         price: 30,
         tagline: "A1 POSTER",
         color: "var(--c-brand-pink)",
@@ -251,6 +264,7 @@ export const flavors = [
     {
         id: "print-squad",
         name: "SQUAD",
+        category: "COLLECTOR EDITION PRINT",
         price: 25,
         tagline: "LIMITED ED.",
         color: "var(--c-brand-orange)",
@@ -274,6 +288,7 @@ export const flavors = [
     {
         id: "print-pov",
         name: "POV",
+        category: "COLLECTOR EDITION PRINT",
         price: 25,
         tagline: "LIMITED ED.",
         color: "#000000",
@@ -297,6 +312,7 @@ export const flavors = [
     {
         id: "print-origins",
         name: "ORIGINS",
+        category: "ARCHIVAL ART PRINT",
         price: 40,
         tagline: "ARCHIVAL",
         color: "#FF0000",
