@@ -1,14 +1,29 @@
+import dynamic from "next/dynamic";
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
-import { FlavorExplosion } from "@/components/FlavorExplosion";
 import { Marquee } from "@/components/Marquee";
-import { WhatIsAeru } from "@/components/WhatIsAeru";
-import { SocialGrid } from "@/components/SocialGrid";
-import { Footer } from "@/components/Footer";
+
+const WhatIsAeru = dynamic(() => import("@/components/WhatIsAeru").then((mod) => mod.WhatIsAeru), {
+  ssr: true,
+});
+
+const FlavorExplosion = dynamic(() => import("@/components/FlavorExplosion").then((mod) => mod.FlavorExplosion), {
+  ssr: true,
+});
+
+const SocialGrid = dynamic(() => import("@/components/SocialGrid").then((mod) => mod.SocialGrid), {
+  ssr: true,
+});
+
+const Footer = dynamic(() => import("@/components/Footer").then((mod) => mod.Footer), {
+  ssr: true,
+});
 
 import { client } from "../../sanity/lib/client";
 import { SanityDocument } from "next-sanity";
 import { flavors as localFlavors } from "@/lib/flavors";
+
+export const revalidate = 60;
 
 const FLAVORS_QUERY = `*[_type == "product"]{
   _id,

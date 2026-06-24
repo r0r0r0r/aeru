@@ -270,6 +270,24 @@ export const Hero = () => {
                 <span className="font-[Courier_New] font-bold text-[10px] tracking-[0.3em] uppercase rotate-180" style={{ writingMode: 'vertical-rl' }}>Scroll Down</span>
                 <div className="w-[1px] h-12 bg-current" />
             </div>
+
+            {/* Preload other hero images for instant switching */}
+            <div className="hidden" aria-hidden="true">
+                <Image
+                    src="/images/stone-bloom-background less.webp"
+                    alt="preload stone bloom"
+                    width={1}
+                    height={1}
+                    priority
+                />
+                <Image
+                    src="/images/night-tonic-backgroundless.webp"
+                    alt="preload night tonic"
+                    width={1}
+                    height={1}
+                    priority
+                />
+            </div>
         </section>
     );
 };
