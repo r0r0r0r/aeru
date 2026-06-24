@@ -8,7 +8,7 @@ export const flavors = [
         color: "var(--c-brand-orange)",
         bg: "#FF4D00",
         accent: "var(--c-brand-yellow)",
-        image: "/images/citrusveil-background less.png",
+        image: "/images/citrusveil-background less.webp",
         description: "Yuzu shockwave. Bergamot blast. No subtle notes here. A high-voltage citrus hit that wakes up the nervous system.",
         notes: ["YUZU", "BERGAMOT", "MINERAL"],
         stats: {
@@ -32,7 +32,7 @@ export const flavors = [
         color: "var(--c-brand-pink)",
         bg: "#FF0080",
         accent: "var(--c-brand-mint)",
-        image: "/images/stone-bloom-background less.png",
+        image: "/images/stone-bloom-background less.webp",
         description: "Hibiscus punch. White peach adrenaline. Sweet chaos. Like drinking a synthesizer solo.",
         notes: ["WHITE PEACH", "HIBISCUS", "FROST"],
         stats: {
@@ -56,7 +56,7 @@ export const flavors = [
         color: "var(--c-brand-violet)",
         bg: "#4A00E0",
         accent: "#FF2E63",
-        image: "/images/night-tonic-backgroundless.png",
+        image: "/images/night-tonic-backgroundless.webp",
         description: "Bitter roots. Blood orange voltage. The midnight fuel. A complex, dark, confident sip for the after-hours.",
         notes: ["BLOOD ORANGE", "GENTIAN", "SPICE"],
         stats: {
@@ -81,7 +81,7 @@ export const flavors = [
         color: "var(--c-brand-yellow)",
         bg: "#FFD600",
         accent: "#000",
-        image: "/images/citrus-smash.png",
+        image: "/images/citrus-smash.webp",
         description: "The remix. Higher acidity, rougher bubbles. A chaotic smash of lemon zest and electric yuzu.",
         notes: ["LEMON ZEST", "STATIC", "ACID"],
         stats: { acidity: 100, sweetness: 10, chaos: 110 },
@@ -96,7 +96,7 @@ export const flavors = [
         color: "var(--c-brand-pink)",
         bg: "#FF0080",
         accent: "#FFF",
-        image: "/images/stone-bloom-vib.png",
+        image: "/images/stone-bloom-vib.webp",
         description: "Slowed and reverb. A hazy, unfiltered peach nectar drift. Softer edges, longer finish.",
         notes: ["NECTAR", "HAZE", "VANILLA"],
         stats: { acidity: 20, sweetness: 90, chaos: 40 },
@@ -111,7 +111,7 @@ export const flavors = [
         color: "var(--c-brand-violet)",
         bg: "#4A00E0",
         accent: "#00FFFF",
-        image: "/images/night-tonic-vib.png",
+        image: "/images/night-tonic-vib.webp",
         description: "For the late ride. Deep violet tonic with a hit of caffeine and neon ginger.",
         notes: ["GINGER", "CAFFEINE", "NEON"],
         stats: { acidity: 70, sweetness: 40, chaos: 100 },
@@ -128,7 +128,7 @@ export const flavors = [
         color: "#FFFFFF",
         bg: "#FF4D00",
         accent: "#000",
-        image: "/images/citrus-zero-chaos.png",
+        image: "/images/citrus-zero-chaos.webp",
         description: "Stripped back. Just the water and the wave. Zero noise, maximum clarity.",
         notes: ["WATER", "AIR", "SODA"],
         stats: { acidity: 50, sweetness: 0, chaos: 0 },
@@ -143,7 +143,7 @@ export const flavors = [
         color: "#FFFFFF",
         bg: "#FF0080",
         accent: "#000",
-        image: "/images/stone-zero-chaos.png",
+        image: "/images/stone-zero-chaos.webp",
         description: "The ghost of a peach. Barely there fruit notes on a crisp mineral backbone.",
         notes: ["MINERAL", "WHISPER", "CRISP"],
         stats: { acidity: 30, sweetness: 0, chaos: 10 },
@@ -158,7 +158,7 @@ export const flavors = [
         color: "#4A00E0",
         bg: "#4A00E0",
         accent: "#000",
-        image: "/images/night-zero-chaos.png",
+        image: "/images/night-zero-chaos.webp",
         description: "Black water. Activated charcoal and silence. The ultimate reset button.",
         notes: ["CHARCOAL", "SILENCE", "VOID"],
         stats: { acidity: 50, sweetness: 0, chaos: 0 },
@@ -174,7 +174,7 @@ export const flavors = [
         color: "var(--c-brand-yellow)",
         bg: "#000000",
         accent: "#FFFFFF",
-        image: "/images/hoodie.png",
+        image: "/images/hoodie.webp",
         description: "Oversized, heavyweight 450GSM cotton. Drop shoulder fit. Puff print AERU logo on back. Built for the warehouse rave.",
         notes: ["COTTON", "OVERSIZED", "BLACK"],
         stats: {
@@ -198,7 +198,7 @@ export const flavors = [
         color: "var(--c-brand-pink)",
         bg: "#FF0080", // Pink instead of White
         accent: "#000000",
-        image: "/images/tote.png",
+        image: "/images/tote.webp",
         description: "Reinforced canvas. Internal laptop pocket. Wide straps. Fits a 12-pack of AERU and your entire life.",
         notes: ["CANVAS", "STRUCTURED", "DURABLE"],
         stats: {
@@ -222,7 +222,7 @@ export const flavors = [
         color: "var(--c-brand-violet)",
         bg: "#121212",
         accent: "#FF2E63",
-        image: "/images/poster-night-real.png",
+        image: "/images/poster-night-real.webp",
         description: "High-gloss A1 print of the Night Tonic campaign. Deep blacks, vibrant violets. The void on your wall.",
         notes: ["A1", "GLOSS", "VIOLET"],
         stats: {
@@ -246,7 +246,7 @@ export const flavors = [
         color: "var(--c-brand-pink)",
         bg: "#FF0080",
         accent: "#00FFF0",
-        image: "/images/poster-stone.png",
+        image: "/images/poster-stone.webp",
         description: "Matte A1 print of the Stone Bloom campaign. Soft noise, neon pinks. Vaporwave for the real world.",
         notes: ["A1", "MATTE", "PINK"],
         stats: {
@@ -270,7 +270,7 @@ export const flavors = [
         color: "var(--c-brand-orange)",
         bg: "#FF4D00", // Orange instead of White
         accent: "#000000",
-        image: "/images/shot-group.png",
+        image: "/images/shot-group.webp",
         description: "The full lineup. A2 satin finish print capturing the complete AERU flavor profile.",
         notes: ["A2", "SATIN", "GROUP"],
         stats: {
@@ -294,7 +294,7 @@ export const flavors = [
         color: "#000000",
         bg: "#121212", // Dark instead of White
         accent: "#000000",
-        image: "/images/shot-pov.png",
+        image: "/images/shot-pov.webp",
         description: "First person perspective. A2 satin finish. The moment before the seal breaks.",
         notes: ["A2", "SATIN", "POV"],
         stats: {
@@ -318,7 +318,7 @@ export const flavors = [
         color: "#FF0000",
         bg: "#000000",
         accent: "#FFFFFF",
-        image: "/images/hero.png",
+        image: "/images/hero.webp",
         description: "The original concept art. Archival quality giclée print on cotton rag paper. Signed limited run.",
         notes: ["GICLEE", "ARCHIVAL", "HERO"],
         stats: {

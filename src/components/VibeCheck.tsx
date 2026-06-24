@@ -36,7 +36,7 @@ export const VibeCheck = () => {
                         className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px] border-[12px] border-white shadow-[10px_10px_0px_rgba(0,0,0,0.2)] rotate-[-3deg] overflow-hidden"
                     >
                         <Image
-                            src="/images/lifestyle.png"
+                            src="/images/lifestyle.webp"
                             alt="Hand holding AERU can"
                             fill
                             className="object-cover"

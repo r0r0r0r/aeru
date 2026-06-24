@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@medusajs/medusa-js": "^6.1.10",
     "@sanity/client": "^7.14.1",
     "@sanity/vision": "^5.7.0",
     "@stripe/stripe-js": "^8.7.0",
@@ -20,6 +21,7 @@
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "sanity": "^5.7.0",
+    "sharp": "^0.34.5",
     "stripe": "^20.3.0",
     "styled-components": "^6.3.8"
   },

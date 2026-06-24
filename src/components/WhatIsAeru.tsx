@@ -90,7 +90,7 @@ export const WhatIsAeru = () => {
                         <div className="absolute w-[38vh] h-[38vh] rounded-full border border-white/10" />
                         <div className="relative w-[18vh] h-[28vh] md:w-[20vh] md:h-[30vh] lg:w-[25vh] lg:h-[36vh]">
                             <Image
-                                src="/images/citrusveil-background less.png"
+                                src="/images/citrusveil-background less.webp"
                                 alt="AERU Citrus Veil"
                                 fill
                                 className="object-contain drop-shadow-2xl"
@@ -151,7 +151,7 @@ export const WhatIsAeru = () => {
                     <div className="absolute w-[40vw] h-[40vw] rounded-full border border-white/10" />
                     <div className="relative w-[30vw] h-[44vw]">
                         <Image
-                            src="/images/citrusveil-background less.png"
+                            src="/images/citrusveil-background less.webp"
                             alt="AERU Can"
                             fill
                             className="object-contain drop-shadow-2xl"

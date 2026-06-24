@@ -18,7 +18,7 @@ const bentoItems = [
     // Row 1: 8 + 4
     {
         id: 1, type: "image",
-        src: "/images/shot-group.png", alt: "The Crew",
+        src: "/images/shot-group.webp", alt: "The Crew",
         span: "col-span-12 md:col-span-8 row-span-1 md:row-span-2",
         pos: "object-center"
     },
@@ -43,7 +43,7 @@ const bentoItems = [
     // Row 2: 4 + 4 + 4
     {
         id: 5, type: "image",
-        src: "/images/shot-street.png", alt: "Urban Vibe",
+        src: "/images/shot-street.webp", alt: "Urban Vibe",
         span: "col-span-12 md:col-span-4 row-span-1 md:row-span-2",
         pos: "object-top"
     },
@@ -67,7 +67,7 @@ const bentoItems = [
     // Row 3
     {
         id: 9, type: "image",
-        src: "/images/shot-backstage.png", alt: "Backstage",
+        src: "/images/shot-backstage.webp", alt: "Backstage",
         span: "col-span-12 md:col-span-4 row-span-1",
         pos: "object-center"
     },
@@ -91,26 +91,26 @@ const bentoItems = [
     // Row 4: big party shot + pov
     {
         id: 13, type: "image",
-        src: "/images/shot-party.png", alt: "Party",
+        src: "/images/shot-party.webp", alt: "Party",
         span: "col-span-12 md:col-span-8 row-span-1 md:row-span-2",
         pos: "object-center"
     },
     {
         id: 14, type: "image",
-        src: "/images/shot-pov.png", alt: "POV",
+        src: "/images/shot-pov.webp", alt: "POV",
         span: "col-span-12 md:col-span-4 row-span-1 md:row-span-2",
         pos: "object-top"
     },
     // Row 5: small colour tiles + new images
     {
         id: 15, type: "image",
-        src: "/images/shot-pour.png", alt: "The Pour",
+        src: "/images/shot-pour.webp", alt: "The Pour",
         span: "col-span-6 md:col-span-3 row-span-1",
         pos: "object-center"
     },
     {
         id: 16, type: "image",
-        src: "/images/shot-vending.png", alt: "Vending",
+        src: "/images/shot-vending.webp", alt: "Vending",
         span: "col-span-6 md:col-span-3 row-span-1",
         pos: "object-center"
     },
@@ -135,13 +135,13 @@ const bentoItems = [
     // Row 6: squad, toast, billboard
     {
         id: 20, type: "image",
-        src: "/images/squad.png", alt: "Squad",
+        src: "/images/squad.webp", alt: "Squad",
         span: "col-span-12 md:col-span-4 row-span-1",
         pos: "object-center"
     },
     {
         id: 21, type: "image",
-        src: "/images/toast.png", alt: "Toast",
+        src: "/images/toast.webp", alt: "Toast",
         span: "col-span-12 md:col-span-4 row-span-1",
         pos: "object-center"
     },
@@ -160,32 +160,32 @@ const bentoItems = [
     // Row 7: Full-width lifestyle + billboard
     {
         id: 24, type: "image",
-        src: "/images/billboard.png", alt: "Billboard",
+        src: "/images/billboard.webp", alt: "Billboard",
         span: "col-span-12 md:col-span-8 row-span-1",
         pos: "object-center"
     },
     {
         id: 25, type: "image",
-        src: "/images/lifestyle.png", alt: "Lifestyle",
+        src: "/images/lifestyle.webp", alt: "Lifestyle",
         span: "col-span-12 md:col-span-4 row-span-1",
         pos: "object-center"
     },
     // Row 8: Posters + accent
     {
         id: 26, type: "image",
-        src: "/images/poster-citrus-real.png", alt: "Citrus Poster",
+        src: "/images/poster-citrus-real.webp", alt: "Citrus Poster",
         span: "col-span-6 md:col-span-3 row-span-1 md:row-span-2",
         pos: "object-top"
     },
     {
         id: 27, type: "image",
-        src: "/images/poster-stone-real.png", alt: "Stone Poster",
+        src: "/images/poster-stone-real.webp", alt: "Stone Poster",
         span: "col-span-6 md:col-span-3 row-span-1 md:row-span-2",
         pos: "object-top"
     },
     {
         id: 28, type: "image",
-        src: "/images/poster-citrus.png", alt: "Citrus Art",
+        src: "/images/poster-citrus.webp", alt: "Citrus Art",
         span: "col-span-12 md:col-span-4 row-span-1",
         pos: "object-center"
     },
@@ -198,13 +198,13 @@ const bentoItems = [
     // Row 9: Hero full-width + hoodie
     {
         id: 30, type: "image",
-        src: "/images/hero.png", alt: "AERU Hero",
+        src: "/images/hero.webp", alt: "AERU Hero",
         span: "col-span-12 md:col-span-8 row-span-1",
         pos: "object-center"
     },
     {
         id: 31, type: "image",
-        src: "/images/hoodie.png", alt: "Hoodie",
+        src: "/images/hoodie.webp", alt: "Hoodie",
         span: "col-span-12 md:col-span-4 row-span-1",
         pos: "object-center"
     },
